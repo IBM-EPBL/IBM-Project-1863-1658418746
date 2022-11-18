@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/resaleintro.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <div class="main">
+        
+        <div id="head"> <h1>Predictive analysis</h1></div>
+       
+        <form action="/predict" method="post">
+            <div id="row">
+                <h3>Brand</h3>
+                <select name="brand"  required="required">
+                    <option value="" selected disabled hidden>choose</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="jaguar">Jaguar</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="honda">Honda</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="land_rover">Land_rover</option>
+                    <option value="nissan">Nissan</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="suzuki">Suzuki</option>
+                </select>
+            </div>
+            <div id="row">
+                <h3>Vehicle Type</h3>
+                <select name="vehicletype"  required="required">
+                    <option value="" selected disabled hidden>choose</option>
+                    <option value="bus">Bus</option>
+                    <option value="combination">Combination</option>
+                    <option value="compact">Compact</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="limousine">Limousine</option>
+                    <option value="suv">SUV</option> 
+                 </select>
+                </div>
+               
+            <div id="row">
+            <h3>Year</h3>
+                <input  name="regyear" type="number" placeholder="eg: 2001"  required>
+            </div>
+            <div id="row">
+            <h3>Kilometers Drived</h3>
+               <input name="kms" type="number" placeholder="eg: 9999" required="required">
+            </div>
+
+            <div id="row">
+            <h3> Fuel type</h3>
+                <select name="fuel"  required="required">
+                   <option value="" selected disabled hidden>choose</option>
+                   <option value="petrol">Petrol</option>
+                   <option value="diesel">Diesel</option>
+                   <option value="cng">CNG</option>
+                   <option value="lgp">LPG</option>     
+                   <option value="electric">Electric</option>             
+                </select>
+            </div>
+            
+            <div id="row">
+            <h3>Transmission Type</h3>
+               <select name="gearbox"  required="required">
+                   <option value="" selected disabled hidden>choose</option>
+                   <option value="manual">Manual</option>
+                   <option value="automatic">Automatic</option>
+               </select>
+            </div>
+
+            <div id="row">
+               <h3>Engine (cc)</h3>
+               <input  name="powerps" type="number" placeholder="eg: 1000" required>
+            </div>
+
+            <div id="row">
+                <h3>Damage</h3>
+                <input  name="damage" placeholder="Yes or No" required>
+            </div>
+            
+
+           <button id="sub" type="submit ">Calculate</button>
+        </form>
+        
+       
+      
+        
+    </div>
+
+
+
+
+</body>
+
+</html>
